@@ -21,3 +21,8 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+header {
+  background-image: url(header_background.png);
+  max-height: 130px;
+}
