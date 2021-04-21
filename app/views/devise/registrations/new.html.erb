@@ -26,17 +26,17 @@
 
   <div class="form-group">
     <%= f.label :name, "ユーザー名" %><br />
-    <%= f.email_field :name, autocomplete: 'name', class: 'form-control', required: true %>
+    <%= f.text_field :name, autocomplete: 'name', class: 'form-control', required: true %>
   </div>
 
   <div class="form-group">
     <%= f.label :profile, "プロフィール" %><br />
-    <%= f.email_field :profile, autocomplete: 'profile', class: 'form-control', required: true %>
+    <%= f.text_field :profile, autocomplete: 'profile', class: 'form-control', required: true %>
   </div>
 
   <div class="form-group">
     <%= f.label :number, "電話番号" %>
-    <%= f.email_field :number, autocomplete: 'number', class: 'form-control', required: true %>
+    <%= f.text_field :number, autocomplete: 'number', class: 'form-control', required: true %>
   </div>
 
   <div class="form-group mt-5">

@@ -12,9 +12,12 @@
   <body>
   <header class="header">
     <%= render 'layouts/header' %>
-    <div class="container-fluid py-4 <%= devise_controller? ? 'mw-md' : 'mw-xl' %>">
+  </header>
+  <div class="container-fluid py-4 <%= devise_controller? ? 'mw-md' : 'mw-xl' %>">
       <%= yield %>
     </div>
-  </header>
+  <footer class="footer">
+      <p class="copyright">Copyright © MyPc All rights reserved.</p>
+    </footer>
   </body>
 </html>

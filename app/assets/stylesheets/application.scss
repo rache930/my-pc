@@ -6,8 +6,6 @@
   max-width: 600px;
 }
 
-// ***** 以下を追加 *****
-
 .mw-xl {
   max-width: 1200px;
 }
@@ -25,4 +23,51 @@
 header {
   background-image: url(header_background.png);
   max-height: 130px;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+.footer {
+  background-color: #999;
+  padding: 6px 0;
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 100vw;
+  text-align: center;
+}
+
+.purchase-btn {
+  width: 120px;
+  background: #c0c0c0;
+  text-align: center;
+  border-radius: 4%;
+  top: 140px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
+}
+
+.form__wrapper {
+  display: flex;
+  justify-content: center;
 }

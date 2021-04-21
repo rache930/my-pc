@@ -1,0 +1,45 @@
+<%= form_with model: @item, local: true do |f|%>
+  <div class="field">
+    <%= f.label :image, "PCの画像" %><br />
+    <%= f.file_field :image, id:"item_image" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pc_name, "型番" %><br />
+    <%= f.text_field :pc_name, id:"item_pc_name", placeholder: "FMV0000,PC-00000..." %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nickname, "愛称" %><br />
+    <%= f.text_field :nickname, id:"item_nickname", placeholder: "○○ちゃん、田中○○..." %>
+  </div>
+
+  <div class="field">
+    <%= f.label :about, "概要" %><br />
+    <%= f.text_area :about, class: :form__text, id:"item_about", placeholder: "使ってみた感想や良い点、悪い点など" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price, "価格"%><br />
+    <%= f.text_field :price, id:"item_price", placeholder: "例)100,000円"%>
+  </div>
+
+  <div class="filed">
+    <%= f.label :category_id, "カテゴリー" %><br />
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "--"}, {class:"select-box", id:"item-category"}) %>
+  </div>
+
+  <div class="filed">
+    <%= f.label :start_date, "購入日"%><br />
+    <%= f.text_field :start_date, id:"item_start_date", placeholder: "例)3年前の秋頃" %>
+  </div>
+
+  <div class="filed">
+    <%= f.label :end_date, "使用終了日"%><br />
+    <%= f.text_field :end_date, id:"item_end_date", placeholder: "例)昨年冬頃" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿", class: :form__btn  %>
+  </div>
+<% end %>
