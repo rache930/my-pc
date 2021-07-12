@@ -6,6 +6,26 @@
         <%= link_to "#{current_user.name}さん", edit_user_registration_path, class: :greeting__link%>
       </div>
     <% end %>
+    <div id="content">
+      <div class="hero">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="hero__title">１．あなた<br>についておしえて</div>
+              <%= image_tag 'image-1.jpg'%>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero__title">２．あなたのパソコン<br>についておしえて</div>
+              <%= image_tag 'image-2.jpg'%>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero__title">３．みんなのパソコン<br>についておしえて</div>
+              <%= image_tag 'image-3.jpg'%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="card__wrapper">
       <%= render partial: "item", collection: @items %>
     </div>

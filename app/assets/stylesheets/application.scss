@@ -1,4 +1,8 @@
-@import "bootstrap/scss/bootstrap"; 
+@import "bootstrap/scss/bootstrap";
+@import 'swiper/swiper-bundle';
+@import "../stylesheets/shared/footer.scss";
+@import "../stylesheets/items/index.scss";
+@import "../stylesheets/items/new.scss";
 
 // max-width
 
@@ -20,6 +24,15 @@
   @extend .alert-danger;
 }
 
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
 header {
   background-image: url(header_background.png);
   max-height: 130px;
@@ -31,17 +44,8 @@ body {
   margin: 0;
   display: flex;
   flex-flow: column;
+  position: relative;
   min-height: 100vh;
-}
-
-.footer {
-  background-color: #999;
-  padding: 6px 0;
-  position: absolute;
-  bottom: 0;
-  height: 30px;
-  width: 100vw;
-  text-align: center;
 }
 
 .purchase-btn {
@@ -53,6 +57,12 @@ body {
   right: 32px;
   position: fixed;
   padding: 15px;
+  z-index: 100;
+  border-radius: 50%;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .purchase-btn-text {

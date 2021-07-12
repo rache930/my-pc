@@ -1,5 +1,5 @@
 <div class="card">
-  <%= link_to image_tag(item.image, class: :card__img ), item_path(items.id) %>
+  <%= link_to image_tag(item.image, class: :card__img ), item_path(item.id) %>
   <div class="card__body">
     <%= link_to item.pc_name, item_path(item.id), class: :card__title%>
     <p class="card__summary">

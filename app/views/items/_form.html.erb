@@ -24,17 +24,17 @@
     <%= f.text_field :price, id:"item_price", placeholder: "例)100,000円"%>
   </div>
 
-  <div class="filed">
+  <div class="field">
     <%= f.label :category_id, "カテゴリー" %><br />
     <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "--"}, {class:"select-box", id:"item-category"}) %>
   </div>
 
-  <div class="filed">
+  <div class="field">
     <%= f.label :start_date, "購入日"%><br />
     <%= f.text_field :start_date, id:"item_start_date", placeholder: "例)3年前の秋頃" %>
   </div>
 
-  <div class="filed">
+  <div class="field">
     <%= f.label :end_date, "使用終了日"%><br />
     <%= f.text_field :end_date, id:"item_end_date", placeholder: "例)昨年冬頃" %>
   </div>
