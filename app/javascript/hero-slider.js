@@ -115,10 +115,7 @@ class HeroSlider {
   
     _initSwiper() {
       return new Swiper(this.el, {
-        // Optional parameters
-        // direction: 'vertical',
         loop: true,
-        grabCursor: true,
         effect: 'coverflow',
         centeredSlides: true,
         slidesPerView: 1,
@@ -128,7 +125,7 @@ class HeroSlider {
           },        
         breakpoints: {
           1024: {
-            slidesPerView: 2,
+            slidesPerView: 1.2,
           }
         },
       });

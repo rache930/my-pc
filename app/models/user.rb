@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :password, on: :create, format: { with: valid_password, message: 'is invalid. Input half-width characters.' }
-    validates :name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'is invalid. Input full-width characters.' }
+    validates :name, uniqueness: true
     validates :profile
     validates :number, uniqueness: true
   end

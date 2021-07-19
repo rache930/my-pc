@@ -13,7 +13,7 @@
   <header class="header">
     <%= render 'layouts/header' %>
   </header>
-  <div class="container-fluid py-4 <%= devise_controller? ? 'mw-md' : 'mw-xl' %>">
+  <div class="container-fluid <%= devise_controller? ? 'mw-md' : 'mw-xl' %>">
       <%= yield %>
     </div>
   <footer class="footer">
